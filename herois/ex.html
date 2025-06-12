@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universos HQ</title>
+</head>
+<body>
+    <script>
+        let universo = prompt("Digite o universo").toLowerCase().trim();
+        let heroi = prompt("Digite o herói").toLowerCase().trim();
+        let qtd = parseInt(prompt("Digite a quantidade"));
+
+        // Validação da quantidade
+        if(isNaN(qtd) || qtd <= 0) {
+            alert("Você digitou uma quantidade inválida.");
+        }else{
+            for(let x = 1; x <= qtd; x++){
+                if(universo === "marvel"){
+                    document.write("O universo é Marvel e o herói é ");
+                    if(heroi === "hulk" || heroi === "thor"){
+                        document.write(heroi.charAt(0).toUpperCase()+heroi.slice(1)+"<br>");
+                    }else{
+                        document.write("Desconhecido");
+                    }
+                }else if(universo === "dc"){
+                    document.write("O universo é DC e o herói é ");
+                    if(heroi === "batman" || heroi === "flash"){
+                        document.write(heroi.charAt(0).toUpperCase()+heroi.slice(1)+"<br>");
+                    }else{
+                        document.write("Desconhecido");
+                    }
+                }else{
+                    document.write("Universo desconhecido...<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
